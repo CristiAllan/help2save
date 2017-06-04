@@ -24,6 +24,8 @@ gem 'materialize-sass'
 gem 'material_icons'
 gem 'pry-byebug'
 gem 'will_paginate', '~> 3.1.0'
+gem 'cloudinary'
+gem 'simple_form'
 
 group :development, :test do
 
