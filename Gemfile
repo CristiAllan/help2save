@@ -25,7 +25,12 @@ gem 'material_icons'
 gem 'pry-byebug'
 gem 'will_paginate', '~> 3.1.0'
 gem 'cloudinary'
+gem 'carrierwave', '~> 1.0'
 gem 'simple_form'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'cancancan', '~> 1.10'
 
 group :development, :test do
 
