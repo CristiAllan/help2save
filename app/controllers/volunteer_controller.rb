@@ -1,21 +1,20 @@
 class VolunteerController < ApplicationController
 
-  def index
-  end
+  # TODO: Descomentar as linhas quando precisarmos subscrever o controller 
 
-  def new
-  end
+  # def show
+  #   super
+  #   # TODO: Adicionar a lógica
+  # end
+  #
+  # def edit
+  #   super
+  #   # TODO: Adicionar a lógica
+  # end
+  #
+  # def update
+  #   super
+  #   # TODO: Adicionar a lógica
+  # end
 
-  def show
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-  
 end
