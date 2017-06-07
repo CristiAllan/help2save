@@ -1,3 +1,16 @@
 @import "materialize";
 @import "material_icons";
+@import "font-awesome";
 @import "site/home";
+@import "voluntaries/registrations";
+
+// Sticky Footer
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}

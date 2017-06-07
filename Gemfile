@@ -12,6 +12,8 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
+gem "font-awesome-rails"       # The font-awesome font bundled as an asset for the rails asset pipeline
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -32,6 +34,7 @@ gem 'devise-i18n'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'cancancan', '~> 1.10'
+gem 'country_select'            # Gemification of rails's country_select http://rubyonrails.com/
 
 group :development, :test do
 
