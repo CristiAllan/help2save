@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'site/home#index'
+  
   namespace :site do
     get 'home/index'
   end
