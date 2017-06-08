@@ -1,7 +1,5 @@
 <div class="container">
-  <p align="center"><strong>Cadastre-se com o</strong> <a href="#">Facebook</a> ou <a href="#"> Google</a></p>
-
-  <hr class="hr-text" data-content="ou">
+  <h4 class="center">Como vonluntário</h4>
 
   <div class="row">
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "col s12 m6 offset-m3"}) do |f| %>
@@ -34,5 +32,10 @@
       </div> <!-- form-inputs -->
 
     <% end %>
+
   </div> <!-- .row -->
+
+  <hr class="hr-text" data-content="ou">
+
+  <p align="center"><strong>Cadastre-se com o</strong> <a href="#">Facebook</a> ou <a href="#"> Google</a></p>
 </div> <!-- .container -->

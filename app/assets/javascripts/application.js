@@ -22,8 +22,9 @@ $(document).ready(function(){
     dismissible: true,
     opacity: .5
   });
+
   // $('#sign-up-modal').modal({
   //     dismissible: true,
   //     opacity: .5
-  //   });
+  // });
 });
