@@ -1,21 +1,22 @@
-<!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">Instituição</a></li>
-  <li><a href="#!">Voluntário</a></li>
-</ul>
-<nav>
-   <div class="nav-wrapper indigo lighten-2">
-     <a href="#" class="brand-logo">
-         <%= image_tag '/shared/logo-help.png', class: "img-responsive" %>
-     </a>
-     <ul id="nav-mobile" class="right hide-on-med-and-down">
-       <li><a href="#"><i class="material-icons">search</i></a></li>
-       <li><a href="#">Home</a></li>
-       <li><a href="#">Vagas</a></li>
-       <li><a href="#">Sobre</a></li>
-       <!-- Dropdown Trigger -->
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Entrar<i class="material-icons right">arrow_drop_down</i></a></li>
-       <li><a href="#">Cadastre-se</a></li>
-     </ul>
-   </div>
- </nav>
+<nav class="nav">
+  <div class="container">
+
+    <div class="nav-wrapper">
+      <%= image_tag 'logo-gif.gif', class: "img-responsive", height: 60, width: 60 %>
+      <%= link_to "Help2Save", root_path, class: "brand-logo", data: { turbolinks: false } %>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#"><i class="material-icons">search</i></a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Vagas</a></li>
+        <li><a href="#">Sobre</a></li>
+        <!-- Modals -->
+        <li><a href="#register-modal">Cadastre-se</a></li>
+        <li><a href="#login-modal">Entrar</a></li>
+      </ul> <!-- #nav-mobile -->
+    </div> <!-- nav-wrapper -->
+
+  </div> <!-- .container -->
+</nav> <!-- .nav-extended -->
+
+<%= render partial: "layouts/shared/register_modal" %>

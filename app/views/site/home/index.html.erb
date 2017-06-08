@@ -1,27 +1,51 @@
-<div class="main">
+<div class="parallax-container">
+  <div class="parallax"><%= image_tag 'h2s1.png', class: "img-responsive", height: 1000, width: 1000 %></div>
+</div> <!-- .parallax-container -->
 
-    <div class="welcome">
-			<div class="message">
-				<h1>Help2Save</h1>
-				<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica</p>
-			</div>
-    </div>
+<div class="container section white">
+  <div class="row">
+    <h3 class="header">Vagas</h3>
+      <% 8.times do |i| %>
+        <div class="col s12 m3">
+          <div class="card  blue  blue lighten-4">
+            <div class="card-content">
+              <span class="card-title">Titulo do trabalho</span>
+              <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+            </div>
 
-    <div class="row">
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#test<%= i %>">Local</a></li>
+                <li class="tab"><a class="active" href="#tests<%= i %>">Ingressar</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="test<%= i %>">
+                Test 1asdasdsadasd
+              </div>
+              <div id="#tests<%= i %>">
+                Test 2asdasdasdasdsa
+              </div>
+            </div>
 
-       <div class="col s12 m3">
-         <div class="card blue-grey darken-1">
-           <div class="card-content white-text">
-             <span class="card-title">Vagas</span>
-             <p>I am a very simple card. I am good at containing small bits of information.
-             I am convenient because I require little markup to use effectively.</p>
-           </div>
-           <div class="card-action">
-             <a href="#">This is a link</a>
-           </div>
-         </div>
-       </div>
+            <!-- <div class="card-action  blue lighten-5">
+              <a href="#" style="color: black;">Entrar</a>
+            </div> -->
+          </div>
+        </div>
+      <% end %>
+  </div> <!-- .row -->
 
-     </div>
+  <hr class="hr-text" data-content="ou">
 
-</div>
+  <div class="row">
+    <h3 class="header">Instituições</h3>
+  </div>
+</div> <!-- .section white -->
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+</script>

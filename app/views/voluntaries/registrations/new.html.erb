@@ -1,17 +1,38 @@
-<h2>Sign up</h2>
+<div class="container">
+  <p align="center"><strong>Cadastre-se com o</strong> <a href="#">Facebook</a> ou <a href="#"> Google</a></p>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+  <hr class="hr-text" data-content="ou">
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-  </div>
+  <div class="row">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "col s12 m6 offset-m3"}) do |f| %>
+      <%= f.error_notification %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+      <div class="form-inputs">
+        <div class="row">
+          <div class="input-field col s6">
+            <%= f.input :first_name, label: 'Primeiro Nome', required: true, autofocus: true %>
+          </div>
+          <div class="input-field col s6">
+            <%= f.input :last_name, label: 'Último Nome', required: true %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <%= f.input :email, label: 'Endereço de email',required: true %>
+          </div>
+          <div class="input-field col s12">
+            <%= f.input :password, label: 'Senha', required: true %>
+          </div>
+          <div class="input-field col s12">
+            <%= f.input :password_confirmation, label: 'Confirmar senha', required: true %>
+          </div>
+        </div>
 
-<%= render "voluntaries/shared/links" %>
+        <div class="form-actions">
+          <%= f.button :submit, "Cadastre-se", class: "col s12 red accent-2" %>
+        </div>
+      </div> <!-- form-inputs -->
+
+    <% end %>
+  </div> <!-- .row -->
+</div> <!-- .container -->

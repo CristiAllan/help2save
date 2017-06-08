@@ -1,0 +1,54 @@
+// focus do form
+.row .input-field input:focus {
+    border-bottom: 1px solid #616161;
+    box-shadow: 0 1px 0 0 #616161;
+}
+// cor do formulário válido
+.row .input-field input.valid {
+    border-bottom: 1px solid #616161;
+    box-shadow: 0 1px 0 0 #616161;
+}
+
+// cor do formulário invalido
+.row .input-field input.invalid {
+    border-bottom: 1px solid #e57373;
+    box-shadow: 0 1px 0 0 #e57373;
+}
+// cor do botão de checkbox
+
+.blue:checked + label:before {
+    border-right: 2px solid blue;
+    // You need to change the colour here / border-bottom: 2px solid blue;
+    // And here;
+}
+
+#panel {
+    margin-top: 100px;
+    padding: 0;
+}
+// Botões
+
+.btn {
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+// Titulo do form
+
+.title {
+    background-color: #1e88e5;
+    color: white;
+    padding: 8px;
+    margin-top: 0;
+}
+// Fields do form
+
+.fields {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+// Checkbox do form
+
+.checkbox {
+    margin-left: 30px;
+}
