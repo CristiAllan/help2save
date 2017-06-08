@@ -1,17 +1,45 @@
-<h2>Sign up</h2>
+<div class="container">
+  <p align="center"><strong>Cadastre-se com o</strong> <a href="#">Facebook</a> ou <a href="#"> Google</a></p>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+  <hr class="hr-text" data-content="ou">
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+  <div class="row">
+
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "col s12 m6 offset-m3"}) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+
+        <div class="row">
+          <div class="input-field col s6">
+            <%= f.input :name, label: 'Nome da instituição', required: true, autofocus: true %>
+          </div>
+          <div class="input-field col s6">
+            <%= f.input :cnpj, label: 'CNPJ', required: true %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <%= f.input :email, required: true, label: 'Email', autofocus: true, label: "Email" %>
+          </div>
+
+          <div class="input-field col s12">
+            <%= f.input :password, required: true, label: 'Senha' %>
+          </div>
+
+          <div class="input-field col s12">
+            <%= f.input :password_confirmation, label: 'Confirmar senha', required: true %>
+          </div>
+
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Sign up", class: "col s12 red accent-2" %>
+        </div>
+      </div>
+
+    <% end %>
+
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "institutions/shared/links" %>
+</div>

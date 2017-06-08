@@ -1,12 +1,12 @@
 // focus do form
 .row .input-field input:focus {
-    border-bottom: 1px solid #616161;
-    box-shadow: 0 1px 0 0 #616161;
+    border-bottom: 1px solid #7986cb;
+    box-shadow: 0 1px 0 0 #7986cb;
 }
 // cor do formulário válido
 .row .input-field input.valid {
-    border-bottom: 1px solid #616161;
-    box-shadow: 0 1px 0 0 #616161;
+    border-bottom: 1px solid #7986cb;
+    box-shadow: 0 1px 0 0 #7986cb;
 }
 
 // cor do formulário invalido
@@ -17,9 +17,8 @@
 // cor do botão de checkbox
 
 .blue:checked + label:before {
-    border-right: 2px solid blue;
-    // You need to change the colour here / border-bottom: 2px solid blue;
-    // And here;
+    border-right: 2px solid #7986cb;
+    border-bottom: 2px solid #7986cb;
 }
 
 #panel {

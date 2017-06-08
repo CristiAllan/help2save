@@ -36,6 +36,8 @@ gem 'omniauth-facebook'
 gem 'cancancan', '~> 1.10'
 gem 'country_select'            # Gemification of rails's country_select http://rubyonrails.com/
 
+
+
 group :development, :test do
 
   gem 'byebug', platform: :mri
