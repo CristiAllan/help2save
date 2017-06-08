@@ -1,38 +1,29 @@
 <div class="parallax-container">
-  <div class="parallax"><%= image_tag 'h2s1.png', class: "img-responsive", height: 1000, width: 1000 %></div>
+  <div class="parallax"><%= image_tag 'h2s1.png', class: "img-responsive" %></div>
 </div> <!-- .parallax-container -->
 
 <div class="container section white">
   <div class="row">
     <h3 class="header">Vagas</h3>
-      <% 8.times do |i| %>
-        <div class="col s12 m3">
-          <div class="card  blue  blue lighten-4">
+      <% @jobs.each do |job| %>
+        <div class="col s12 m4">
+          <div class="card small amber lighten-3 sticky-action">
             <div class="card-content">
-              <span class="card-title">Titulo do trabalho</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-            </div>
+              <a class="card-title activator grey-text text-darken-4"> <%= job.title %> <i class="material-icons right">info_outline</i></a>
+              <p><%= job.description %></p>
+            </div> <!-- .card-reveal -->
 
-            <div class="card-tabs">
-              <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a href="#test<%= i %>">Local</a></li>
-                <li class="tab"><a class="active" href="#tests<%= i %>">Ingressar</a></li>
-              </ul>
-            </div>
-            <div class="card-content grey lighten-4">
-              <div id="test<%= i %>">
-                Test 1asdasdsadasd
-              </div>
-              <div id="#tests<%= i %>">
-                Test 2asdasdasdasdsa
-              </div>
-            </div>
+            <div class="card-action center white">
+              <a href="#">Ingressar</a>
+            </div> <!-- .card-reveal -->
 
-            <!-- <div class="card-action  blue lighten-5">
-              <a href="#" style="color: black;">Entrar</a>
-            </div> -->
-          </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Local<i class="material-icons right">close</i></span>
+              <p class="center">
+                Validade: <%= job.start_date %>, <%= job.end_date %>
+              </p>
+            </div> <!-- .card-reveal -->
+          </div> <!-- .card amber lighten-4 sticky-action -->
         </div>
       <% end %>
   </div> <!-- .row -->
@@ -42,10 +33,11 @@
   <div class="row">
     <h3 class="header">Instituições</h3>
   </div>
-</div> <!-- .section white -->
+</div> <!-- .container section white -->
 
 <script type="text/javascript">
   $(document).ready(function(){
     $('.parallax').parallax();
+    $('ul.tabs').tabs();
   });
 </script>
