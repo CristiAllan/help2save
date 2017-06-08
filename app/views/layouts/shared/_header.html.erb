@@ -1,9 +1,11 @@
-<nav>
-  <div class="nav-wrapper indigo lighten-2">
-    <a href="#" class="brand-logo">
-        <%= image_tag '/shared/logo-help.png', class: "img-responsive" %>
-    </a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
+<nav class="nav">
+  <div class="container">
+
+    <div class="nav-wrapper">
+      <%= image_tag 'logo-gif.gif', class: "img-responsive", height: 60, width: 60 %>
+      <%= link_to "Help2Save", root_path, class: "brand-logo", data: { turbolinks: false } %>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#"><i class="material-icons">search</i></a></li>
         <li><a href="#">Home</a></li>
         <li><a href="#">Vagas</a></li>
@@ -11,8 +13,10 @@
         <!-- Modals -->
         <li><a href="#register-modal">Cadastre-se</a></li>
         <li><a href="#login-modal">Entrar</a></li>
-    </ul>
-  </div>
-</nav>
+      </ul> <!-- #nav-mobile -->
+    </div> <!-- nav-wrapper -->
+
+  </div> <!-- .container -->
+</nav> <!-- .nav-extended -->
 
 <%= render partial: "layouts/shared/register_modal" %>
