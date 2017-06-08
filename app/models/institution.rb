@@ -9,4 +9,7 @@ class Institution < ApplicationRecord
   has_many :jobs
 
   validates_presence_of :name, :cnpj, :description
+
+  validates :cpf, presence: true, uniqueness: true, cpf: true
+
 end
