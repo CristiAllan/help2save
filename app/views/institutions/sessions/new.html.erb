@@ -1,34 +1,48 @@
-<div class="container">
-  <p align="center"><strong>Entre com o</strong> <a href="#">Facebook</a> ou <a href="#"> Google</a></p>
-
-  <hr class="hr-text" data-content="ou">
-
+<div class="container devise-forms">
   <div class="row">
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "col s12 m6 offset-m3"}) do |f| %>
+
+    <h4 class="center">Entrar como <strong>Instituição</strong></h4>
+    <hr class="hr-text" data-content="-">
+
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "col s12 l5"}) do |f| %>
     <%= f.error_notification %>
+      <div class="form-inputs">
+        <div class="row">
 
-    <div class="form-inputs">
-      <div class="row">
+          <div class="input-field col s12">
+            <%= f.input :email, required: true, autofocus: true, label: "Email" %>
+          </div>
 
-        <div class="input-field col s12">
-          <%= f.input :email, required: true, autofocus: true, label: "Email" %>
+          <div class="input-field col s12">
+            <%= f.input :password, required: true, label: "Senha" %>
+          </div>
+
+          <div class="input-field col s12">
+            <%= f.check_box :remember_me, class: "blue", as: :boolean if devise_mapping.rememberable? %>
+            <%= f.label :remember_me, 'Lembrar-me' %>
+          </div>
+
         </div>
-
-        <div class="input-field col s12">
-          <%= f.input :password, required: true, label: "Senha" %>
-        </div>
-
-        <div class="input-field col s12">
-          <%= f.check_box :remember_me, class: "blue", as: :boolean if devise_mapping.rememberable? %>
-          <%= f.label :remember_me, 'Lembrar-me' %>
-        </div>
-
       </div>
-    </div>
 
+      <br>
       <div class="form-actions">
         <%= f.button :submit, "Log in", class: "col s12 red lighten-1" %>
       </div>
     <% end %>
+
+    <div class="col l1"></div>
+
+    <div class="col s12 l5">
+      <a class="col s12 waves-effect waves-light blue darken-4 btn-large">
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        Continuar com Facebook
+      </a>
+      <a class="col s12 waves-effect waves-light blue lighten-2 btn-large">
+        <i class="fa fa-google" aria-hidden="true"></i>
+        Continuar com Google
+      </a>
+    </div>
+
   </div>
-</div>
+</div> <!-- .container devise-forms -->
