@@ -3,16 +3,35 @@
 @import "font-awesome";
 @import "site/home";
 @import "voluntaries/registrations";
+@import url('https://fonts.googleapis.com/css?family=Quicksand:500,700|Rubik');
 
 // Sticky Footer
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
 }
-
 main {
     flex: 1 0 auto;
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+.brand-logo {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+
+.container.devise-forms {
+  margin-top: 60px;
+}
+
+#register-modal .btn-large {
+  font-family: 'Rubik', sans-serif;
 }
 
 .hr-text {
@@ -47,4 +66,8 @@ main {
     color: #818078;
     background-color: #fcfcfa;
   }
+}
+
+.verticalline {
+    border-left: thick solid #ff0000;
 }

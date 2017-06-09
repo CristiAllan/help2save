@@ -23,6 +23,7 @@ $(document).ready(function(){
     opacity: .5
   });
 
+  $(".button-collapse").sideNav();
   // $('#sign-up-modal').modal({
   //     dismissible: true,
   //     opacity: .5

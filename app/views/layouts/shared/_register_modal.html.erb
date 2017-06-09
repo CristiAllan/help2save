@@ -30,10 +30,10 @@
         <% end %>
       </div>
       <div class="row">
-        <a class="col m12 center-align waves-effect waves-light red lighten-1 btn-large">
+        <%= link_to new_institution_registration_path, class: "col m12 center-align waves-effect waves-light red lighten-1 btn-large", data: { turbolinks: false } do %>
           <i class="fa fa-envelope-o" aria-hidden="true"></i>
-           Como Instituição
-        </a>
+          Como Instituição
+        <% end %>
       </div>
       <div class="row">
         <p align="center">
@@ -45,10 +45,6 @@
           <%= link_to " Entrar", new_voluntary_session_path, class: "waves-effect waves-teal btn-flat blue-text", data: { turbolinks: false } %>
         </p>
       </div>
-    </div>
-
-    <div class="modal-footer">
-      <a href="#!" class="btn-flat">Fechar</a>
     </div>
 
   </div> <!-- .container -->

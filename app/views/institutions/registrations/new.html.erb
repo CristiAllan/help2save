@@ -1,6 +1,6 @@
-<div class="container">
-  <h4 class="center">Como instituição</h4>
-
+<div class="container devise-forms">
+  <h4 class="center">Cadastre-se como <strong>Instituição</strong></h4>
+  <hr class="hr-text" data-content="-">
   <div class="row">
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "col s12 m6 offset-m3"}) do |f| %>
@@ -44,7 +44,15 @@
   </div>
 
   <hr class="hr-text" data-content="ou">
+  <div class="row">
+    <a class="col s12 m6 offset-m3 center waves-effect waves-light blue darken-4 btn-large">
+      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+       Continuar com Facebook
+    </a>
+    <a class="col s12 m6 offset-m3 center waves-effect waves-light blue lighten-2 btn-large">
+      <i class="fa fa-google" aria-hidden="true"></i>
+      Continuar com Google
+    </a>
+  </div> <!-- .row -->
 
-  <p align="center"><strong>Cadastre-se com o</strong> <a href="#">Facebook</a> ou <a href="#"> Google</a></p>
-
-</div>
+</div> <!-- .container -->
