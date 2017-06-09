@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   get '/institutions/list', to: 'public#listInstitution'
   get '/voluntaries/list', to: 'public#listVoluntary'
 
+  get 'voluntary/profile', to: 'public#voluntary'
+  get 'institution/profile', to: 'public#institution'
+
 end
