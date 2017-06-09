@@ -24,6 +24,11 @@ $(document).ready(function(){
   });
 
   $(".button-collapse").sideNav();
+
+  $('.dropdown-button').dropdown({
+      hover: true,
+      belowOrigin: true
+  });
   // $('#sign-up-modal').modal({
   //     dismissible: true,
   //     opacity: .5
