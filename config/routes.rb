@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   resources :jobs, only: [:index, :show, :new, :create, :delete, :edit] #index será a tela Explorar Jobs galera
   get '/candidate/new', to: 'voluntary_jobs#new' #rota onde usuário vai preencher form de candidatura a Job
 
+  get '/institutions/list', to: 'public#listInstitution'
+  get '/voluntaries/list', to: 'public#listVoluntary'
 
 end
