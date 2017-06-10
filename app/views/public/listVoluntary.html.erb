@@ -1,0 +1,26 @@
+<div class="container section white">
+    <% @listVoluntary.each do |l| %>
+    <div class="row">
+      <div class="col s12 m12 l12">
+
+        <div class="card horizontal z-depth-4 hoverable">
+          <div class="card-image">
+            <blockquote>
+              <img src="http://lorempixel.com/100/190/nature/6">
+            </blockquote>
+          </div>
+
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5 class="header red-text text-lighten-1"><%= "#{l.first_name} #{l.last_name}" %></h5>
+              <p class="flow-text"><%= l.description.truncate(140) %></p>
+            </div>
+            <div class="card-action">
+              <a href="/voluntaries/profile/<%= l.id %>">Ver Perfil</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
