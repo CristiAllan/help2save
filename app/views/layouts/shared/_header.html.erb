@@ -21,8 +21,8 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><%= link_to "Home", root_path, data: { turbolinks: false } %></li>
         <li><a href="#">Vagas</a></li>
-        <li><a href="#">Instituições</a></li>
-        <li><a href="#">Voluntários</a></li>
+        <li><%= link_to('Instituições', institutions_list_path) %></li>
+        <li><%= link_to('Voluntários', voluntaries_list_path) %></li>
         <% if !current_voluntary || !current_voluntary %>
           <!-- Modals -->
           <li><a href="#register-modal">Cadastre-se</a></li>
