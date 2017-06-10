@@ -1,21 +1,49 @@
 <!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">Instituição</a></li>
-  <li><a href="#!">Voluntário</a></li>
+<ul id="dropdown1" class="dropdown-content blue lighten-5">
+  <li><%= link_to "Voluntário", new_voluntary_session_path, class: "black-text", data: { turbolinks: false } %></li>
+  <li><%= link_to "Instituição", new_voluntary_session_path, class: "black-text", data: { turbolinks: false } %></li>
 </ul>
-<nav>
-   <div class="nav-wrapper indigo lighten-2">
-     <a href="#" class="brand-logo">
-         <%= image_tag '/shared/logo-help.png', class: "img-responsive" %>
-     </a>
-     <ul id="nav-mobile" class="right hide-on-med-and-down">
-       <li><a href="#"><i class="material-icons">search</i></a></li>
-       <li><a href="#">Home</a></li>
-       <li><a href="#">Vagas</a></li>
-       <li><a href="#">Sobre</a></li>
-       <!-- Dropdown Trigger -->
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Entrar<i class="material-icons right">arrow_drop_down</i></a></li>
-       <li><a href="#">Cadastre-se</a></li>
-     </ul>
-   </div>
- </nav>
+<!-- Dropdown Structure -->
+<ul id="dropdown2" class="dropdown-content">
+  <li><%= link_to "Como Voluntário", new_voluntary_session_path, class: "black-text", data: { turbolinks: false } %></li>
+  <li><%= link_to "Como Instituição", new_voluntary_session_path, class: "black-text", data: { turbolinks: false } %></li>
+</ul>
+
+<nav class="nav light-blue lighten-1">
+  <div class="container">
+
+    <div class="nav-wrapper">
+      <%= image_tag 'logo-gif.gif', class: "img-responsive", height: 60, width: 60 %>
+      <%= link_to "Help2Save", root_path, class: "brand-logo", data: { turbolinks: false } %>
+
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%= link_to "Home", root_path, data: { turbolinks: false } %></li>
+        <li><a href="#">Vagas</a></li>
+        <li><%= link_to('Instituições', institutions_list_path) %></li>
+        <li><%= link_to('Voluntários', voluntaries_list_path) %></li>
+        <% if !current_voluntary || !current_voluntary %>
+          <!-- Modals -->
+          <li><a href="#register-modal">Cadastre-se</a></li>
+          <!-- Dropdown Trigger -->
+          <li><a class="dropdown-button" href="javascript:;" data-activates="dropdown1">Entrar<i class="material-icons right">arrow_drop_down</i></a></li>
+        <% end %>
+      </ul> <!-- #nav-mobile -->
+
+      <ul class="side-nav" id="mobile-demo">
+        <li><%= link_to "Home", root_path, data: { turbolinks: false } %></li>
+        <li><a href="#">Vagas</a></li>
+        <li><a href="#">Instituições</a></li>
+        <li><a href="#">Voluntários</a></li>
+        <!-- Modals -->
+        <li><a href="#register-modal">Cadastre-se</a></li>
+        <li><a class="dropdown-button" href="javascript:;" data-activates="dropdown2">Entrar<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul> <!-- .side-nav -->
+
+    </div> <!-- nav-wrapper -->
+
+  </div> <!-- .container -->
+</nav> <!-- .nav-extended -->
+
+<%= render partial: "layouts/shared/register_modal" %>
