@@ -1,0 +1,51 @@
+<!-- Modal Structure -->
+<div id="register-modal" class="modal">
+  <div class="modal-content">
+    <div class="container">
+      <div class="row">
+        <div class="center-align">
+          <h5>Junte-se a nós</h5>
+        </div>
+      </div>
+
+      <div class="row">
+        <a class="col m12 center-align waves-effect waves-light blue darken-4 btn-large">
+          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+           Continuar com Facebook
+        </a>
+      </div>
+      <div class="row">
+        <a class="col m12 center-align waves-effect waves-light blue lighten-2 btn-large">
+          <i class="fa fa-google" aria-hidden="true"></i>
+           Continuar com Google
+        </a>
+      </div>
+
+      <hr class="hr-text" data-content="ou">
+
+      <div class="row">
+        <%= link_to new_voluntary_registration_path, class: "col m12 center-align waves-effect waves-light red lighten-1 btn-large", data: { turbolinks: false } do %>
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          Como Voluntário
+        <% end %>
+      </div>
+      <div class="row">
+        <%= link_to new_institution_registration_path, class: "col m12 center-align waves-effect waves-light red lighten-1 btn-large", data: { turbolinks: false } do %>
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          Como Instituição
+        <% end %>
+      </div>
+      <div class="row">
+        <p align="center">
+          Ao clicar em Cadastrar ou Continuar, eu concordo com os Termos de Serviço,
+          a Política de Privacidade e a Política de Não Discriminação do <strong>Hack2Save</strong>.
+        </p>
+        <p align="center">
+          <strong>Já é cadastrado?</strong>
+          <%= link_to " Entrar", new_voluntary_session_path, class: "waves-effect waves-teal btn-flat blue-text", data: { turbolinks: false } %>
+        </p>
+      </div>
+    </div>
+
+  </div> <!-- .container -->
+</div> <!-- .modal -->

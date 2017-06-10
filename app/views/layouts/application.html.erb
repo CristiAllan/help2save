@@ -9,8 +9,59 @@
   </head>
 
   <body>
-    <%= render partial: "layouts/shared/header"%>
-    <%= yield %>
-    <%= render partial: "layouts/shared/footer"%>
+    <main>
+      <%= render partial: "layouts/shared/header"%>
+
+      <% if current_voluntary || current_institution %>
+        <% if current_voluntary %>
+          <ul id="slide-out" class="side-nav">
+            <li>
+              <div class="userView">
+                <div class="background light-blue lighten-1">
+                </div>
+                <!-- <a href="#!user"><img class="circle" src="images/yuna.jpg"></a> -->
+                <span class="white-text name"> <%= "#{current_voluntary.first_name} #{current_voluntary.last_name}" %> </span>
+                <span class="white-text email"> <%= current_voluntary.email %> </span>
+              </div>
+            </li>
+            <li><a href="#!"><i class="material-icons">settings</i>Configuração da conta</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!">Perfil</a></li>
+            <li><a href="#!">Editar perfil</a></li>
+            <li><%= link_to "Sair", destroy_voluntary_session_path, method: :delete %></li>
+          </ul>
+        <% end %>
+        <% if current_institution %>
+          <ul id="slide-out" class="side-nav">
+            <li>
+              <div class="userView">
+                <div class="background light-blue lighten-1">
+                </div>
+                <!-- <a href="#!user"><img class="circle" src="images/yuna.jpg"></a> -->
+                <span class="white-text name"> <%= current_institution.name %> </span>
+                <span class="white-text email"><%= current_institution.email %></span>
+              </div>
+            </li>
+            <li><a href="#!"><i class="material-icons">settings</i>Configuração da conta</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#!">Perfil</a></li>
+            <li><a href="#!">Editar perfil</a></li>
+            <li><%= link_to "Sair", destroy_institution_session_path, method: :delete %></li>
+          </ul>
+        <% end %>
+
+
+        <div class="fixed-action-btn">
+          <a href="#" data-activates="slide-out" class="profile-sidebar-collapse btn-floating btn-large red"><i class="material-icons">menu</i></a>
+        </div>
+
+      <% end %>
+
+      <%= yield %>
+      <%= render partial: "layouts/shared/footer"%>
+    </main>
+    <script type="text/javascript">
+      $(".profile-sidebar-collapse").sideNav();
+    </script>
   </body>
 </html>

@@ -1,27 +1,43 @@
-<div class="main">
+<div class="parallax-container">
+  <div class="parallax"><%= image_tag 'h2s1.png', class: "img-responsive" %></div>
+</div> <!-- .parallax-container -->
 
-    <div class="welcome">
-			<div class="message">
-				<h1>Help2Save</h1>
-				<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica</p>
-			</div>
-    </div>
+<div class="container section white">
+  <div class="row">
+    <h3 class="header">Vagas</h3>
+      <% @jobs.each do |job| %>
+        <div class="col s12 m4">
+          <div class="card small amber lighten-3 sticky-action">
+            <div class="card-content">
+              <a class="card-title activator grey-text text-darken-4"> <%= job.title %> <i class="material-icons right">info_outline</i></a>
+              <strong>Descrição:</strong><p><%= job.description %></p>
+            </div> <!-- .card-reveal -->
 
-    <div class="row">
+            <div class="card-action center white">
+              <a href="#">Ingressar</a>
+            </div> <!-- .card-reveal -->
 
-       <div class="col s12 m3">
-         <div class="card blue-grey darken-1">
-           <div class="card-content white-text">
-             <span class="card-title">Vagas</span>
-             <p>I am a very simple card. I am good at containing small bits of information.
-             I am convenient because I require little markup to use effectively.</p>
-           </div>
-           <div class="card-action">
-             <a href="#">This is a link</a>
-           </div>
-         </div>
-       </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Local<i class="material-icons right">close</i></span>
+              <p class="center">
+                Validade: <%= job.start_date %>, <%= job.end_date %>
+              </p>
+            </div> <!-- .card-reveal -->
+          </div> <!-- .card amber lighten-4 sticky-action -->
+        </div>
+      <% end %>
+  </div> <!-- .row -->
 
-     </div>
+  <hr class="hr-text" data-content="-">
 
-</div>
+  <div class="row">
+    <h3 class="header">Voluntários</h3>
+  </div>
+</div> <!-- .container section white -->
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.parallax').parallax();
+    $('ul.tabs').tabs();
+  });
+</script>

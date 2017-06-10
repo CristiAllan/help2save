@@ -9,5 +9,7 @@ class Voluntary < ApplicationRecord
   has_many :voluntary_jobs
   has_many :jobs, through: :voluntary_jobs
 
-  validates_presence_of :first_name, :last_name, :birth_date, :gender, :description
+  validates_presence_of :first_name, :last_name
+
+  accepts_nested_attributes_for :address
 end
